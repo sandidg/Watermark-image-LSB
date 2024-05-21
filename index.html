@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watermark Preview and Application</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="img2blob.js"></script>
+    <script src="main.js"></script>
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Watermark Preview and Application</h1>
+    <form>
+        <label for="imageUpload">Upload Image:</label>
+        <input type="file" id="imageUpload" accept="image/*"><br><br>
+        
+        <label for="watermark">Watermark Text:</label>
+        <input type="text" id="watermark"><br><br>
+
+        <label for="fontStyle">Font Style:</label>
+        <input type="text" id="fontStyle" value="Arial"><br><br>
+
+        <label for="fontSize">Font Size:</label>
+        <input type="number" id="fontSize" value="30"><br><br>
+
+        <label for="fontColor">Font Color:</label>
+        <input type="color" id="fontColor" value="#000000"><br><br>
+
+        <button type="button" id="previewWatermark">Preview Watermark</button><br><br>
+
+        <canvas id="watermarkCanvas" width="800" height="400"></canvas><br><br>
+
+        <button type="button" id="applyWatermark" class="hidden">Apply Watermark</button><br><br>
+
+        <img id="preview" style="display: none;">
+        <img id="watermarkedImage1" src="" alt="Watermarked Image 1">
+        <img id="watermarkedImage2" src="" alt="Watermarked Image 2">
+        <div id="confirmation" class="hidden">Watermark applied successfully!</div>
+    </form>
+</body>
+</html>
